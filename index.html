@@ -1,0 +1,430 @@
+<style>
+  .hub-root {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #0C2340;
+    background: #fff;
+    max-width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .hub-root *, .hub-root *::before, .hub-root *::after {
+    box-sizing: border-box;
+  }
+
+  /* HERO */
+  .hub-hero {
+    background: #fff;
+    padding: 40px 40px 32px 40px;
+  }
+
+  .hub-hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0C2340;
+    margin: 0 0 6px 0;
+    letter-spacing: 0.5px;
+  }
+
+  .hub-hero h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0C2340;
+    margin: 0 0 12px 0;
+  }
+
+  .hub-hero p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 22px 0;
+    max-width: 520px;
+    line-height: 1.5;
+  }
+
+  .hub-btn-primary {
+    display: inline-block;
+    background: #2E7D32;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 28px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  .hub-btn-primary:hover {
+    background: #1B5E20;
+    transform: scale(1.03);
+  }
+
+  /* SECTION TITLE */
+  .hub-section-title-wrap {
+    background: #fff;
+    padding: 28px 40px 0 40px;
+  }
+
+  .hub-section-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0C2340;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin: 0 0 8px 0;
+  }
+
+  .hub-green-accent {
+    width: 60px;
+    height: 3px;
+    background: #2E7D32;
+    border-radius: 2px;
+    margin-bottom: 0;
+  }
+
+  /* CARDS ROW */
+  .hub-cards-row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+  }
+
+  .hub-card {
+    background: #fff;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1;
+    min-width: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: default;
+  }
+
+  .hub-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+  }
+
+  .hub-card-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    line-height: 1;
+  }
+
+  .hub-card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0C2340;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+  }
+
+  .hub-card-desc {
+    font-size: 0.82rem;
+    color: #555;
+    margin: 0 0 18px 0;
+    line-height: 1.45;
+    flex: 1;
+  }
+
+  .hub-card-btn {
+    width: 100%;
+    background: #2E7D32;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 8px 0;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.2s, transform 0.2s;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: block;
+    text-decoration: none;
+  }
+
+  .hub-card-btn:hover {
+    background: #1B5E20;
+    transform: scale(1.02);
+  }
+
+  /* INCENTIVOS */
+  .hub-incentivos {
+    background: #F5F5F5;
+    padding: 30px 40px;
+  }
+
+  .hub-incentivos-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .hub-badge {
+    background: #2E7D32;
+    color: #fff;
+    border-radius: 50px;
+    padding: 2px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+
+  .hub-dashed-box {
+    border: 2px dashed #BDBDBD;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: #9E9E9E;
+    font-size: 0.88rem;
+    margin-top: 16px;
+    background: transparent;
+  }
+
+  /* CONHEÇA O TIME */
+  .hub-team {
+    background: #fff;
+    padding: 30px 40px 40px 40px;
+  }
+
+  .hub-team-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+
+  .hub-team-card {
+    background: #F5F5F5;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    width: 120px;
+    min-width: 100px;
+    flex-shrink: 0;
+  }
+
+  .hub-avatar {
+    width: 60px;
+    height: 60px;
+    background: #E0E0E0;
+    border-radius: 50%;
+    margin: 0 auto 8px auto;
+    border: 2px dashed #BDBDBD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hub-avatar-icon {
+    font-size: 1.5rem;
+    color: #BDBDBD;
+    line-height: 1;
+  }
+
+  .hub-team-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0C2340;
+    margin: 0 0 3px 0;
+    line-height: 1.3;
+  }
+
+  .hub-team-role {
+    font-size: 0.75rem;
+    color: #888;
+    margin: 0;
+  }
+
+  @media (max-width: 700px) {
+    .hub-hero,
+    .hub-section-title-wrap,
+    .hub-incentivos,
+    .hub-team {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    .hub-cards-row {
+      padding-left: 18px;
+      padding-right: 18px;
+      flex-direction: column;
+    }
+
+    .hub-card {
+      min-width: unset;
+    }
+
+    .hub-team-cards {
+      gap: 10px;
+    }
+
+    .hub-team-card {
+      width: 100px;
+    }
+  }
+</style>
+
+<div class="hub-root" id="hubRoot">
+
+  <!-- HERO -->
+  <div class="hub-hero">
+    <h1>HUB DE EFETIVIDADE</h1>
+    <h2>Central do IFT</h2>
+    <p>Contate o HUB, acompanhe suas solicitações, consulte o FAQ – tudo em um único lugar</p>
+    <button class="hub-btn-primary" onclick="hubHandleClick('portal')">Portal SFE Brasil</button>
+  </div>
+
+  <!-- SECTION TITLE -->
+  <div class="hub-section-title-wrap">
+    <p class="hub-section-label">Produtividade da Força de Vendas</p>
+    <div class="hub-green-accent"></div>
+  </div>
+
+  <!-- 4 CARDS ROW -->
+  <div class="hub-cards-row">
+
+    <div class="hub-card" id="card1">
+      <div class="hub-card-icon">📋</div>
+      <div class="hub-card-title">Formulário de Solicitação</div>
+      <div class="hub-card-desc">Abra um chamado para o Hub.</div>
+      <button class="hub-card-btn" onclick="hubHandleClick('form')">Abrir Solicitação</button>
+    </div>
+
+    <div class="hub-card" id="card2">
+      <div class="hub-card-icon">💬</div>
+      <div class="hub-card-title">FAQ – Perguntas Frequentes</div>
+      <div class="hub-card-desc">Respostas para as perguntas mais comuns</div>
+      <button class="hub-card-btn" onclick="hubHandleClick('faq')">Consultar FAQ</button>
+    </div>
+
+    <div class="hub-card" id="card3">
+      <div class="hub-card-icon">🕐</div>
+      <div class="hub-card-title">Minhas Solicitações</div>
+      <div class="hub-card-desc">Acompanhe o status dos seus chamados abertos e concluídos</div>
+      <button class="hub-card-btn" onclick="hubHandleClick('history')">Ver histórico</button>
+    </div>
+
+    <div class="hub-card" id="card4">
+      <div class="hub-card-icon">📅</div>
+      <div class="hub-card-title">Calendário SFE</div>
+      <div class="hub-card-desc">Acompanhe as principais datas e processos do Hub</div>
+      <button class="hub-card-btn" onclick="hubHandleClick('calendar')">Consulte aqui</button>
+    </div>
+
+  </div>
+
+  <!-- INCENTIVOS -->
+  <div class="hub-incentivos">
+    <div class="hub-incentivos-header">
+      <p class="hub-section-label" style="margin:0;">INCENTIVOS | EM BREVE</p>
+      <span class="hub-badge">Em breve</span>
+    </div>
+    <div class="hub-dashed-box">Conteúdo em breve...</div>
+  </div>
+
+  <!-- CONHEÇA O TIME -->
+  <div class="hub-team">
+    <p class="hub-section-label">CONHEÇA O TIME</p>
+    <div class="hub-green-accent"></div>
+    <div class="hub-team-cards">
+
+      <div class="hub-team-card">
+        <div class="hub-avatar">
+          <span class="hub-avatar-icon">👤</span>
+        </div>
+        <p class="hub-team-name">Nome Sobrenome</p>
+        <p class="hub-team-role">Cargo</p>
+      </div>
+
+      <div class="hub-team-card">
+        <div class="hub-avatar">
+          <span class="hub-avatar-icon">👤</span>
+        </div>
+        <p class="hub-team-name">Nome Sobrenome</p>
+        <p class="hub-team-role">Cargo</p>
+      </div>
+
+      <div class="hub-team-card">
+        <div class="hub-avatar">
+          <span class="hub-avatar-icon">👤</span>
+        </div>
+        <p class="hub-team-name">Nome Sobrenome</p>
+        <p class="hub-team-role">Cargo</p>
+      </div>
+
+      <div class="hub-team-card">
+        <div class="hub-avatar">
+          <span class="hub-avatar-icon">👤</span>
+        </div>
+        <p class="hub-team-name">Nome Sobrenome</p>
+        <p class="hub-team-role">Cargo</p>
+      </div>
+
+      <div class="hub-team-card">
+        <div class="hub-avatar">
+          <span class="hub-avatar-icon">👤</span>
+        </div>
+        <p class="hub-team-name">Nome Sobrenome</p>
+        <p class="hub-team-role">Cargo</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  (function () {
+    var hubRoutes = {
+      portal:   '#',
+      form:     '#',
+      faq:      '#',
+      history:  '#',
+      calendar: '#'
+    };
+
+    window.hubHandleClick = function (key) {
+      var url = hubRoutes[key] || '#';
+      if (url && url !== '#') {
+        window.open(url, '_blank', 'noopener');
+      }
+    };
+
+    // Animate cards on load
+    var cards = document.querySelectorAll('#hubRoot .hub-card');
+    cards.forEach(function (card, i) {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.4s ease ' + (i * 0.08) + 's, transform 0.4s ease ' + (i * 0.08) + 's, box-shadow 0.2s';
+      setTimeout(function () {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, 80 + i * 80);
+    });
+
+    // Animate team cards
+    var teamCards = document.querySelectorAll('#hubRoot .hub-team-card');
+    teamCards.forEach(function (card, i) {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(16px)';
+      card.style.transition = 'opacity 0.4s ease ' + (0.3 + i * 0.07) + 's, transform 0.4s ease ' + (0.3 + i * 0.07) + 's';
+      setTimeout(function () {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, 300 + i * 70);
+    });
+  })();
+</script>
